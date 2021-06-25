@@ -26,7 +26,7 @@ export class CompararComponent implements OnInit {
   constructor(private cuentaService: CuentaService,
               private categoriaService: CategoriaService) {
     this.formularioBusqueda = new FormGroup({
-      iban1: new FormControl(''),
+      iban1: new FormControl('',Validators.required),
       iban2: new FormControl('', Validators.required),
       categoria: new FormControl('', Validators.required)
     });
