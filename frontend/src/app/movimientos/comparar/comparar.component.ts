@@ -63,4 +63,18 @@ export class CompararComponent implements OnInit {
     return this.cuentaService.getMovimientosPorCategoria(categoria, iban);
   }
 
+  sumarGastos1(movimientos: Movimientos):Number{
+    return this.movimientos1.gastos.reduce((acum, g)=> acum+ g.importe,0)
+   }
+   sumarIngresos1(movimientos:Movimientos):Number{
+     return this.movimientos1.ingresos.reduce((acum, g)=> acum+ g.importe,0)
+   }
+   sumarGastos2(movimientos: Movimientos):Number{
+     return this.movimientos2.gastos.reduce((acum, g)=> acum+ g.importe,0)
+    }
+    sumarIngresos2(movimientos:Movimientos):Number{
+      return this.movimientos2.ingresos.reduce((acum, g)=> acum+ g.importe,0)
+    }
+
+
 }
